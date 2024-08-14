@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:tractian_exemple/infra/services/i_dio_client_service.dart';
 
 import '../models/assets_tree_model.dart';
@@ -14,17 +12,21 @@ class AssetsTreeDataSourceImpl implements IAssetsTreeDataSource {
     required String companyId,
   }) async {
     try {
-      final result = await clientService.get(
-          url:
-              'https://raw.githubusercontent.com/tractian/challenges/main/assets/api-data.json');
+      final resultLocations = await clientService.get(
+          url: 'https://fake-api.tractian.com/companies/$companyId/locations');
 
-      final data = jsonDecode(result.data);
-      final dataFromCompany = data?[companyId] as Map<String, dynamic>?;
-      if (dataFromCompany == null) {
+      final locations = resultLocations.data;
+      final resultAssets = await clientService.get(
+          url: 'https://fake-api.tractian.com/companies/$companyId/assets');
+
+      final assets = resultAssets.data;
+
+      if (locations == null && assets == null) {
         throw Exception();
       }
 
-      return AssetsTreeModel.fromMap(map: dataFromCompany);
+      return AssetsTreeModel.fromMap(
+          map: {'locations': locations, 'assets': assets});
     } catch (e) {
       throw Exception(e);
     }
