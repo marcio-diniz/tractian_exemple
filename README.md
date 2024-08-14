@@ -1,6 +1,6 @@
 # tractian
 
-Este projeto foi desenvolvido como parte do teste para a vaga da Tractian de Desenvolvedor Mobile Flutter. Criei seguindo princípios de OOP, Design Paterns e boas práticas de arquitetura.
+Este projeto foi desenvolvido como parte do teste para a vaga da Tractian de Desenvolvedor Mobile Flutter. Criei seguindo princípios de OOP, Design Paterns e boas práticas de arquitetura, além de buscar melhorar a expeência com a UI da aplicação.
 
 Imagens:
 | Companies | Assets |
