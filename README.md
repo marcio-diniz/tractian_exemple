@@ -30,5 +30,5 @@ Imagens:
 - Trabalhar com dado local: a idéria era sempre abrir a aplicação com o dado salvo local, e na sequência buscar o remoto;
 - Mais testes unitátios.
 
-##Considerações Finais:
+## Considerações Finais:
 Estou aberto a feedbacks e melhorias. Agradeço a oportunidade e estou à disposição para discutir o projeto.
