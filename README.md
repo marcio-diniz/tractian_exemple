@@ -5,7 +5,7 @@ Este projeto foi desenvolvido como parte do teste para a vaga da Tractian de Des
 Imagens:
 | Companies | Assets | Video |
 | ---------- | ---------- | ---------- |
-| <img src='https://github.com/user-attachments/assets/0142dd94-928c-4869-8deb-33002957888b' height='500'/> | <img src='https://github.com/user-attachments/assets/c633fa3b-7517-4588-925e-4398f90db125' height='500'/> | <video src='https://github.com/user-attachments/assets/c622bb43-a74f-43c8-b906-8711555ca41a' height='500'/> |
+| <img src='https://github.com/user-attachments/assets/0142dd94-928c-4869-8deb-33002957888b' height='500'/> | <img src='https://github.com/user-attachments/assets/c633fa3b-7517-4588-925e-4398f90db125' height='500'/> | <video src='https://github.com/user-attachments/assets/6819a294-2138-48b6-9fdf-2c862b8547a9' height='500'/> |
 
 
 ## Allterações de layout:
@@ -33,4 +33,5 @@ Imagens:
 
 ## Considerações Finais:
 Estou aberto a feedbacks e melhorias. Agradeço a oportunidade e estou à disposição para discutir o projeto.
+
 
