@@ -3,9 +3,10 @@
 Este projeto foi desenvolvido como parte do teste para a vaga da Tractian de Desenvolvedor Mobile Flutter. Criei seguindo princípios de OOP, Design Paterns e boas práticas de arquitetura, além de buscar melhorar a expeência com a UI da aplicação.
 
 Imagens:
-| Companies | Assets |
-| ---------- | ---------- |
-| <img src='https://github.com/user-attachments/assets/0142dd94-928c-4869-8deb-33002957888b' height='500'/> | <img src='https://github.com/user-attachments/assets/c633fa3b-7517-4588-925e-4398f90db125' height='500'/> |
+| Companies | Assets | Video |
+| ---------- | ---------- | ---------- |
+| <img src='https://github.com/user-attachments/assets/0142dd94-928c-4869-8deb-33002957888b' height='500'/> | <img src='https://github.com/user-attachments/assets/c633fa3b-7517-4588-925e-4398f90db125' height='500'/> | <video src='https://github.com/user-attachments/assets/6819a294-2138-48b6-9fdf-2c862b8547a9' height='500'/> |
+
 
 ## Allterações de layout:
 ### Companies:
@@ -30,5 +31,7 @@ Imagens:
 - Trabalhar com dado local: a idéria era sempre abrir a aplicação com o dado salvo local, e na sequência buscar o remoto;
 - Mais testes unitátios.
 
-##Considerações Finais:
+## Considerações Finais:
 Estou aberto a feedbacks e melhorias. Agradeço a oportunidade e estou à disposição para discutir o projeto.
+
+
