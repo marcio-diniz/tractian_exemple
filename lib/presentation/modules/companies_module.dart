@@ -7,11 +7,14 @@ import '../../domain/usecase/interfaces/i_get_companies_list_usecase.dart';
 import '../../data/datasources/company_data_source_impl.dart';
 import '../../data/datasources/interfaces/i_company_data_source.dart';
 import '/presentation/controllers/companies_list_cubit.dart';
-
+/* 
 class CompaniesModule extends Module {
   @override
   List<Module> get imports => [CoreModule()];
   @override
+  // TODO: implement binds
+  List<Bind<Object>> get binds => [];
+/*   @override
   void binds(Injector i) {
     i.add<ICompanyDataSource>(CompanyDataSourceImpl.new);
     i.add<ICompanyRepository>(CompanyRepositoryImpl.new);
@@ -19,5 +22,6 @@ class CompaniesModule extends Module {
 
     i.add(CompaniesListCubit.new);
     super.binds(i);
-  }
+  } */
 }
+ */

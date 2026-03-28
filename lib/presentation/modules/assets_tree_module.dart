@@ -8,10 +8,18 @@ import '../../data/repositories/assets_tree_repository_impl.dart';
 import '../../domain/repositories/i_assets_tree_repository.dart';
 import '../../domain/usecase/get_assets_tree_by_company_id_usecase.dart';
 
-class AssetsTreeModule extends Module {
+/* class AssetsTreeModule extends Module {
   @override
   List<Module> get imports => [CoreModule()];
   @override
+  // TODO: implement binds
+  List<Bind<Object>> get binds => [
+        Bind<IAssetsTreeDataSource>((i) => i.get()),
+        Bind<IAssetsTreeRepository>((i) => i.get()),
+        Bind<IGetAssetsTreeByCompanyIdUsecase>((i) => i.get()),
+        Bind<AssetsTreeCubit>((i) => i.get()),
+      ];
+/*   @override
   void binds(Injector i) {
     i.add<IAssetsTreeDataSource>(AssetsTreeDataSourceImpl.new);
     i.add<IAssetsTreeRepository>(AssetsTreeRepositoryImpl.new);
@@ -19,5 +27,6 @@ class AssetsTreeModule extends Module {
         GetAssetsTreeByCompanyIdUsecase.new);
     i.add(AssetsTreeCubit.new);
     super.binds(i);
-  }
+  } */
 }
+ */

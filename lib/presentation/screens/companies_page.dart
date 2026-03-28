@@ -4,6 +4,7 @@ import 'package:tractian_exemple/presentation/controllers/companies_list_cubit.d
 import 'package:tractian_exemple/presentation/controllers/companies_list_state.dart';
 import 'package:tractian_exemple/presentation/themes/default_theme.dart';
 import 'package:tractian_exemple/presentation/widgets/app_bar/app_bar_with_logo_widget.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 import '../widgets/company/company_item_widget.dart';
 
@@ -20,6 +21,7 @@ class CompaniesPage extends StatefulWidget {
 }
 
 class _CompaniesPageState extends State<CompaniesPage> {
+  WebViewController webViewController = WebViewController();
   @override
   void initState() {
     debugPrint('COMPANIES PAGE STARTED');
@@ -29,53 +31,59 @@ class _CompaniesPageState extends State<CompaniesPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const AppBarWithLogoWidget(),
-      body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: BlocBuilder<CompaniesListCubit, CompaniesListState>(
-            bloc: widget.companiesListCubit,
-            builder: (context, state) {
-              if (state.status == CompaniesListStatus.error) {
-                const Center(
-                  child: Text(
-                    'Oops, an error occurred.Try again.',
-                    textAlign: TextAlign.center,
-                  ),
-                );
-              }
-              return Column(
-                children: [
-                  Visibility(
-                    visible: state.status == CompaniesListStatus.loading,
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: 24,
-                          width: 24,
-                          child: CircularProgressIndicator(
-                            color: primaryColor,
-                            strokeWidth: 3,
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        print('voltou aqui');
+      },
+      child: Scaffold(
+        appBar: const AppBarWithLogoWidget(),
+        body: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: BlocBuilder<CompaniesListCubit, CompaniesListState>(
+              bloc: widget.companiesListCubit,
+              builder: (context, state) {
+                if (state.status == CompaniesListStatus.error) {
+                  const Center(
+                    child: Text(
+                      'Oops, an error occurred.Try again.',
+                      textAlign: TextAlign.center,
+                    ),
+                  );
+                }
+                return Column(
+                  children: [
+                    Visibility(
+                      visible: state.status == CompaniesListStatus.loading,
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: 24,
+                            width: 24,
+                            child: CircularProgressIndicator(
+                              color: primaryColor,
+                              strokeWidth: 3,
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 10),
-                        Text('Loading...')
-                      ],
+                          SizedBox(width: 10),
+                          Text('Loading...')
+                        ],
+                      ),
                     ),
-                  ),
-                  Expanded(
-                      child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: state.companies.length,
-                    itemBuilder: (context, index) => CompanyItemWidget(
-                      companyEntity: state.companies[index],
-                    ),
-                  ))
-                ],
-              );
-            },
-          )),
+                    Expanded(
+                        child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: state.companies.length,
+                      itemBuilder: (context, index) => CompanyItemWidget(
+                        companyEntity: state.companies[index],
+                      ),
+                    ))
+                  ],
+                );
+              },
+            )),
+      ),
     );
   }
 }

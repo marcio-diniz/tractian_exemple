@@ -14,7 +14,8 @@ class _AppWidgetState extends State<AppWidget> {
     return MaterialApp.router(
       title: 'TRACTIAN',
       debugShowCheckedModeBanner: false,
-      routerConfig: Modular.routerConfig,
+      routeInformationParser: Modular.routeInformationParser,
+      routerDelegate: Modular.routerDelegate,
     );
   }
 }
